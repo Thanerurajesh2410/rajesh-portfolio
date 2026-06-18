@@ -1,101 +1,145 @@
-<!DOCTYPE html>
+from pathlib import Path
+
+html = r'''<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rajesh Thaneru | Senior QA Engineer</title>
+<title>Rajesh Thaneru | Senior QA Engineer & QA Consultant</title>
+<meta name="description" content="Senior QA Engineer with 7.8+ years experience in UAT, API Testing, Automation Testing, Playwright, Selenium and QA Consulting.">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <style>
 html{scroll-behavior:smooth}
-.glass{backdrop-filter:blur(12px);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15)}
-.gradient{background:linear-gradient(135deg,#0f172a,#1e3a8a,#06b6d4)}
-.kpi:hover{transform:translateY(-6px)}
+body{background:#020617}
+.glass{background:rgba(255,255,255,.05);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.1)}
+.card:hover{transform:translateY(-6px);transition:.3s}
 </style>
 </head>
-<body class="bg-slate-950 text-white">
+<body class="text-white">
 
-<nav class="fixed w-full z-50 bg-slate-950/90 border-b border-slate-800">
-<div class="max-w-7xl mx-auto flex justify-between p-4">
+<nav class="fixed top-0 w-full z-50 bg-slate-950/90 border-b border-slate-800">
+<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between">
 <h1 class="font-bold text-cyan-400">Rajesh Thaneru</h1>
 <div class="space-x-4 text-sm">
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
 <a href="#services">Services</a>
 <a href="#contact">Contact</a>
 </div>
 </div>
 </nav>
 
-<section class="gradient min-h-screen flex items-center">
-<div class="max-w-7xl mx-auto px-6 w-full">
-<div class="grid md:grid-cols-2 gap-10 items-center">
-<div>
-<p class="text-cyan-300 mb-3">Available for Freelancing Projects Worldwide</p>
-<h1 class="text-5xl md:text-7xl font-bold mb-4">Senior QA Engineer</h1>
-<h2 class="text-2xl mb-6">UAT Specialist • API Testing • Automation Testing</h2>
-<p class="text-slate-200 mb-8">7.8+ years delivering quality software through Functional Testing, UAT, Release Management, API Testing, SQL Validation and Automation.</p>
-<div class="flex flex-wrap gap-3">
-<a href="#contact" class="bg-cyan-500 px-5 py-3 rounded-lg">Hire Me</a>
-  <a href="Rajesh_Thaneru.pdf"
-   target="_blank"
-   class="bg-green-500 px-5 py-3 rounded-lg text-white">
-   Download Resume
-</a>
-<a href="https://www.linkedin.com/in/rajeshthaneru/" class="border px-5 py-3 rounded-lg">LinkedIn</a>
+<section class="min-h-screen flex items-center bg-gradient-to-r from-slate-950 via-blue-950 to-cyan-950">
+<div class="max-w-7xl mx-auto px-6">
+<h1 class="text-6xl font-bold mb-4">Senior QA Engineer</h1>
+<p class="text-2xl mb-6">UAT Specialist • API Testing • Automation Testing • QA Consultant</p>
+<p class="max-w-3xl text-slate-300 mb-8">7.8+ years of experience delivering enterprise SaaS solutions through Functional Testing, UAT, Release Management, SQL Validation, API Testing and Automation Frameworks.</p>
+
+<div class="flex gap-4 flex-wrap">
+<a href="#contact" class="bg-cyan-500 px-6 py-3 rounded-lg">Hire Me</a>
+<a href="Rajesh_Thaneru.pdf" class="border px-6 py-3 rounded-lg">Download Resume</a>
+<a href="https://www.linkedin.com/in/rajeshthaneru/" class="border px-6 py-3 rounded-lg">LinkedIn</a>
 </div>
-</div>
-<div class="grid grid-cols-2 gap-4">
-<div class="glass p-6 rounded-xl kpi"><h3 class="text-4xl font-bold">7.8+</h3><p>Years Experience</p></div>
-<div class="glass p-6 rounded-xl kpi"><h3 class="text-4xl font-bold">500+</h3><p>API Test Cases</p></div>
-<div class="glass p-6 rounded-xl kpi"><h3 class="text-4xl font-bold">500+</h3><p>Test Scenarios</p></div>
-<div class="glass p-6 rounded-xl kpi"><h3 class="text-4xl font-bold">6+</h3><p>Major Releases</p></div>
-</div>
+
+<div class="grid md:grid-cols-4 gap-4 mt-12">
+<div class="glass p-6 rounded-xl"><h3 class="text-4xl font-bold">7.8+</h3><p>Years Experience</p></div>
+<div class="glass p-6 rounded-xl"><h3 class="text-4xl font-bold">500+</h3><p>API Test Cases</p></div>
+<div class="glass p-6 rounded-xl"><h3 class="text-4xl font-bold">500+</h3><p>Test Scenarios</p></div>
+<div class="glass p-6 rounded-xl"><h3 class="text-4xl font-bold">6+</h3><p>Major Releases</p></div>
 </div>
 </div>
 </section>
 
-<section id="about" class="max-w-7xl mx-auto px-6 py-16">
+<section id="about" class="max-w-7xl mx-auto p-8">
 <h2 class="text-4xl font-bold mb-6">About Me</h2>
-<div class="bg-slate-900 p-8 rounded-2xl">
-<p>Delivery-focused QA professional with extensive experience in SaaS platforms, defect governance, UAT coordination, API testing, SQL validation, Agile delivery, and stakeholder management.</p>
+<div class="glass rounded-2xl p-8">
+<p>Delivery-focused QA professional with expertise in Test Strategy, UAT Coordination, Defect Governance, API Testing, SQL Validation, Agile Delivery and Stakeholder Management. Experienced in Real Estate SaaS platforms and complex business workflows.</p>
 </div>
 </section>
 
-<section id="skills" class="max-w-7xl mx-auto px-6 py-16">
-<h2 class="text-4xl font-bold mb-8">Technical Skills</h2>
-<div class="grid md:grid-cols-3 gap-4">
-<div class="bg-slate-900 p-6 rounded-xl">Playwright</div>
-<div class="bg-slate-900 p-6 rounded-xl">Selenium</div>
-<div class="bg-slate-900 p-6 rounded-xl">Python</div>
-<div class="bg-slate-900 p-6 rounded-xl">Postman</div>
-<div class="bg-slate-900 p-6 rounded-xl">SQL</div>
-<div class="bg-slate-900 p-6 rounded-xl">JIRA</div>
+<section id="skills" class="max-w-7xl mx-auto p-8">
+<h2 class="text-4xl font-bold mb-8">Skills & Technologies</h2>
+<div class="grid md:grid-cols-4 gap-4">
+<div class="card glass p-6 rounded-xl">Playwright</div>
+<div class="card glass p-6 rounded-xl">Selenium</div>
+<div class="card glass p-6 rounded-xl">Python</div>
+<div class="card glass p-6 rounded-xl">Postman</div>
+<div class="card glass p-6 rounded-xl">SQL</div>
+<div class="card glass p-6 rounded-xl">JIRA</div>
+<div class="card glass p-6 rounded-xl">Git</div>
+<div class="card glass p-6 rounded-xl">Agile/Scrum</div>
 </div>
 </section>
 
-<section id="services" class="max-w-7xl mx-auto px-6 py-16">
-<h2 class="text-4xl font-bold mb-8">Freelance Services</h2>
+<section id="projects" class="max-w-7xl mx-auto p-8">
+<h2 class="text-4xl font-bold mb-8">Project Highlights</h2>
 <div class="grid md:grid-cols-3 gap-6">
-<div class="bg-slate-900 p-6 rounded-xl"><h3 class="font-bold mb-3">Manual Testing</h3><p>Functional, Regression, UAT</p></div>
-<div class="bg-slate-900 p-6 rounded-xl"><h3 class="font-bold mb-3">Automation Testing</h3><p>Playwright, Selenium Frameworks</p></div>
-<div class="bg-slate-900 p-6 rounded-xl"><h3 class="font-bold mb-3">API Testing</h3><p>REST, SOAP, Postman</p></div>
+<div class="glass p-6 rounded-xl">
+<h3 class="font-bold text-xl">Fathom Share Plan</h3>
+<p>150+ scenarios, role-based validation, revenue share testing and UAT support.</p>
+</div>
+<div class="glass p-6 rounded-xl">
+<h3 class="font-bold text-xl">Commercial Cap Rollover</h3>
+<p>SQL validation, edge-case testing and business rule verification.</p>
+</div>
+<div class="glass p-6 rounded-xl">
+<h3 class="font-bold text-xl">Onboarding Platform</h3>
+<p>API testing, permission validation and release readiness support.</p>
+</div>
 </div>
 </section>
 
-<section id="contact" class="max-w-7xl mx-auto px-6 py-16">
-<div class="bg-cyan-600 rounded-2xl p-10 text-slate-950">
+<section id="services" class="max-w-7xl mx-auto p-8">
+<h2 class="text-4xl font-bold mb-8">Freelance QA Services</h2>
+<div class="grid md:grid-cols-3 gap-6">
+<div class="glass p-6 rounded-xl"><h3 class="font-bold mb-2">Manual Testing</h3><p>Functional, Regression, Smoke, UAT</p></div>
+<div class="glass p-6 rounded-xl"><h3 class="font-bold mb-2">Automation Testing</h3><p>Playwright, Selenium, Framework Setup</p></div>
+<div class="glass p-6 rounded-xl"><h3 class="font-bold mb-2">API Testing</h3><p>REST, SOAP, Postman, Validation</p></div>
+<div class="glass p-6 rounded-xl"><h3 class="font-bold mb-2">QA Documentation</h3><p>RTM, Test Plans, Reports</p></div>
+<div class="glass p-6 rounded-xl"><h3 class="font-bold mb-2">Release Management</h3><p>Go/No-Go, Sign-Off Support</p></div>
+<div class="glass p-6 rounded-xl"><h3 class="font-bold mb-2">QA Consulting</h3><p>Process Audits & Strategy</p></div>
+</div>
+</section>
+
+<section class="max-w-7xl mx-auto p-8">
+<h2 class="text-4xl font-bold mb-8">Experience Timeline</h2>
+<div class="glass p-8 rounded-xl">
+<p><strong>2020 - 2025</strong> | Senior QA Engineer | IntelliAgent</p><hr class="my-4 border-slate-700">
+<p><strong>2019 - 2020</strong> | Telecommunication Engineer | C-DOT</p><hr class="my-4 border-slate-700">
+<p><strong>2017 - 2019</strong> | Associate Consultant QA | Logic Information Systems</p>
+</div>
+</section>
+
+<section id="contact" class="max-w-7xl mx-auto p-8">
+<div class="bg-cyan-500 text-slate-950 rounded-3xl p-10">
 <h2 class="text-4xl font-bold mb-4">Let's Work Together</h2>
-<p class="mb-4">Available for Freelancing, Contract and Full-Time Opportunities.</p>
+<p class="mb-4">Available for Freelancing, Contract, Consulting and Full-Time Opportunities.</p>
 <p><strong>Email:</strong> thanerurajesh@gmail.com</p>
 <p><strong>Phone:</strong> +91 9866125609</p>
 <p><strong>LinkedIn:</strong> linkedin.com/in/rajeshthaneru</p>
+
+<form class="mt-6 grid gap-3">
+<input class="p-3 rounded text-black" placeholder="Your Name">
+<input class="p-3 rounded text-black" placeholder="Email Address">
+<textarea class="p-3 rounded text-black" rows="4" placeholder="Project Details"></textarea>
+<button type="button" class="bg-slate-950 text-white p-3 rounded">Request QA Consultation</button>
+</form>
 </div>
 </section>
 
-<footer class="text-center py-8 border-t border-slate-800">
-© 2026 Rajesh Thaneru | QA Consultant
+<a href="https://wa.me/919866125609" class="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full text-white">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<footer class="text-center p-8 border-t border-slate-800">
+© 2026 Rajesh Thaneru | Senior QA Engineer | QA Consultant
 </footer>
 
 </body>
-</html>
+</html>'''
+
+path = "/mnt/data/Rajesh_Ultimate_Portfolio.html"
+Path(path).write_text(html, encoding="utf-8")
+print(path)
