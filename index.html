@@ -1,182 +1,132 @@
 from pathlib import Path
+import base64
 
-html = r'''<!DOCTYPE html>
+img_path = "/mnt/data/1773904273668(5).jpg"
+img_data = ""
+try:
+    with open(img_path, "rb") as f:
+        img_data = base64.b64encode(f.read()).decode()
+except:
+    pass
+
+html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rajesh Thaneru | Senior QA Engineer & QA Consultant</title>
-<meta name="description" content="Senior QA Engineer with 7.8+ years experience in UAT, API Testing, Automation Testing, Playwright, Selenium and QA Consulting.">
+<title>Rajesh Thaneru | Senior QA Engineer</title>
 <script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <style>
-html{scroll-behavior:smooth}
-body{background:#020617}
-.glass{background:rgba(255,255,255,.05);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.1)}
-.card:hover{transform:translateY(-6px);transition:.3s}
+html{{scroll-behavior:smooth}}
+.hero{{background:linear-gradient(135deg,#020617,#0f172a,#0ea5e9)}}
+.glass{{background:rgba(255,255,255,.08);backdrop-filter:blur(10px)}}
 </style>
 </head>
-<body class="text-white">
-
-<nav class="fixed top-0 w-full z-50 bg-slate-950/90 border-b border-slate-800">
-<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between">
-<h1 class="font-bold text-cyan-400">Rajesh Thaneru</h1>
-<div class="space-x-4 text-sm">
+<body class="bg-slate-950 text-white">
+<nav class="fixed top-0 w-full bg-slate-950/90 z-50 border-b border-slate-800">
+<div class="max-w-7xl mx-auto p-4 flex justify-between">
+<div class="font-bold text-cyan-400">Rajesh Thaneru</div>
+<div class="space-x-4">
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
 <a href="#services">Services</a>
 <a href="#contact">Contact</a>
 </div>
 </div>
 </nav>
 
-<section class="min-h-screen flex items-center bg-gradient-to-r from-slate-950 via-blue-950 to-cyan-950">
-<div class="max-w-7xl mx-auto px-6">
-<h1 class="text-6xl font-bold mb-4">Senior QA Engineer</h1>
-<p class="text-2xl mb-6">UAT Specialist • API Testing • Automation Testing • QA Consultant</p>
-<p class="max-w-3xl text-slate-300 mb-8">7.8+ years of experience delivering enterprise SaaS solutions through Functional Testing, UAT, Release Management, SQL Validation, API Testing and Automation Frameworks.</p>
-
-<div class="flex gap-4 flex-wrap">
-<a href="#contact" class="bg-cyan-500 px-6 py-3 rounded-lg">Hire Me</a>
-<a href="Rajesh_Thaneru.pdf" class="border px-6 py-3 rounded-lg">Download Resume</a>
-<a href="https://www.linkedin.com/in/rajeshthaneru/" class="border px-6 py-3 rounded-lg">LinkedIn</a>
-</div>
-
-<div class="grid md:grid-cols-4 gap-4 mt-12">
-<div class="glass p-6 rounded-xl"><h3 class="text-4xl font-bold">7.8+</h3><p>Years Experience</p></div>
-<div class="glass p-6 rounded-xl"><h3 class="text-4xl font-bold">500+</h3><p>API Test Cases</p></div>
-<div class="glass p-6 rounded-xl"><h3 class="text-4xl font-bold">500+</h3><p>Test Scenarios</p></div>
-<div class="glass p-6 rounded-xl"><h3 class="text-4xl font-bold">6+</h3><p>Major Releases</p></div>
+<section class="hero min-h-screen flex items-center">
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+<div>
+<h1 class="text-6xl font-bold">Rajesh Thaneru</h1>
+<p class="text-2xl mt-4">Senior QA Engineer | UAT Specialist | QA Consultant</p>
+<p class="mt-6 text-slate-300">Available for Freelancing, Contract and Full-Time Opportunities.</p>
+<div class="mt-6 flex gap-3 flex-wrap">
+<a href="#contact" class="bg-cyan-500 px-6 py-3 rounded-xl">Hire Me</a>
+<a href="Rajesh_Thaneru.pdf" class="border px-6 py-3 rounded-xl">Download Resume</a>
+<a href="https://www.linkedin.com/in/rajeshthaneru/" class="border px-6 py-3 rounded-xl">LinkedIn</a>
 </div>
 </div>
-</section>
-
-<section id="about" class="max-w-7xl mx-auto p-8">
-<h2 class="text-4xl font-bold mb-6">About Me</h2>
-<div class="glass rounded-2xl p-8">
-<p>Delivery-focused QA professional with expertise in Test Strategy, UAT Coordination, Defect Governance, API Testing, SQL Validation, Agile Delivery and Stakeholder Management. Experienced in Real Estate SaaS platforms and complex business workflows.</p>
+<div class="text-center">
+<img src="data:image/jpeg;base64,{img_data}" class="w-72 h-72 rounded-full mx-auto border-4 border-cyan-500">
 </div>
-</section>
-
-<section id="skills" class="max-w-7xl mx-auto p-8">
-<h2 class="text-4xl font-bold mb-8">Skills & Technologies</h2>
-<div class="grid md:grid-cols-4 gap-4">
-<div class="card glass p-6 rounded-xl">Playwright</div>
-<div class="card glass p-6 rounded-xl">Selenium</div>
-<div class="card glass p-6 rounded-xl">Python</div>
-<div class="card glass p-6 rounded-xl">Postman</div>
-<div class="card glass p-6 rounded-xl">SQL</div>
-<div class="card glass p-6 rounded-xl">JIRA</div>
-<div class="card glass p-6 rounded-xl">Git</div>
-<div class="card glass p-6 rounded-xl">Agile/Scrum</div>
-</div>
-</section>
-
-<section id="projects" class="max-w-7xl mx-auto p-8">
-<h2 class="text-4xl font-bold mb-8">Project Highlights</h2>
-<div class="grid md:grid-cols-3 gap-6">
-<div class="glass p-6 rounded-xl">
-<h3 class="font-bold text-xl">Fathom Share Plan</h3>
-<p>150+ scenarios, role-based validation, revenue share testing and UAT support.</p>
-</div>
-<div class="glass p-6 rounded-xl">
-<h3 class="font-bold text-xl">Commercial Cap Rollover</h3>
-<p>SQL validation, edge-case testing and business rule verification.</p>
-</div>
-<div class="glass p-6 rounded-xl">
-<h3 class="font-bold text-xl">Onboarding Platform</h3>
-<p>API testing, permission validation and release readiness support.</p>
-</div>
-</div>
-</section>
-
-<section id="services" class="max-w-7xl mx-auto p-8">
-<h2 class="text-4xl font-bold mb-8">Freelance QA Services</h2>
-<div class="grid md:grid-cols-3 gap-6">
-<div class="glass p-6 rounded-xl"><h3 class="font-bold mb-2">Manual Testing</h3><p>Functional, Regression, Smoke, UAT</p></div>
-<div class="glass p-6 rounded-xl"><h3 class="font-bold mb-2">Automation Testing</h3><p>Playwright, Selenium, Framework Setup</p></div>
-<div class="glass p-6 rounded-xl"><h3 class="font-bold mb-2">API Testing</h3><p>REST, SOAP, Postman, Validation</p></div>
-<div class="glass p-6 rounded-xl"><h3 class="font-bold mb-2">QA Documentation</h3><p>RTM, Test Plans, Reports</p></div>
-<div class="glass p-6 rounded-xl"><h3 class="font-bold mb-2">Release Management</h3><p>Go/No-Go, Sign-Off Support</p></div>
-<div class="glass p-6 rounded-xl"><h3 class="font-bold mb-2">QA Consulting</h3><p>Process Audits & Strategy</p></div>
 </div>
 </section>
 
 <section class="max-w-7xl mx-auto p-8">
-<h2 class="text-4xl font-bold mb-8">Experience Timeline</h2>
-<div class="glass p-8 rounded-xl">
-<p><strong>2020 - 2025</strong> | Senior QA Engineer | IntelliAgent</p><hr class="my-4 border-slate-700">
-<p><strong>2019 - 2020</strong> | Telecommunication Engineer | C-DOT</p><hr class="my-4 border-slate-700">
-<p><strong>2017 - 2019</strong> | Associate Consultant QA | Logic Information Systems</p>
+<div class="grid md:grid-cols-4 gap-4">
+<div class="glass p-6 rounded-xl"><h3 class="text-4xl font-bold">7.8+</h3><p>Years Experience</p></div>
+<div class="glass p-6 rounded-xl"><h3 class="text-4xl font-bold">500+</h3><p>API Tests</p></div>
+<div class="glass p-6 rounded-xl"><h3 class="text-4xl font-bold">500+</h3><p>Scenarios</p></div>
+<div class="glass p-6 rounded-xl"><h3 class="text-4xl font-bold">6+</h3><p>Major Releases</p></div>
 </div>
-</section>        
-<form id="consultationForm" onsubmit="sendConsultation(event)">
-
-    <input
-        id="name"
-        type="text"
-        placeholder="Your Name"
-        required
-        class="p-3 rounded text-black w-full mb-3">
-
-    <input
-        id="email"
-        type="email"
-        placeholder="Email Address"
-        required
-        class="p-3 rounded text-black w-full mb-3">
-
-    <input
-        id="company"
-        type="text"
-        placeholder="Company Name"
-        class="p-3 rounded text-black w-full mb-3">
-
-    <input
-        id="phone"
-        type="text"
-        placeholder="Phone Number"
-        class="p-3 rounded text-black w-full mb-3">
-
-    <select
-        id="service"
-        class="p-3 rounded text-black w-full mb-3">
-
-        <option>Manual Testing</option>
-        <option>Automation Testing</option>
-        <option>API Testing</option>
-        <option>UAT Support</option>
-        <option>Release Management</option>
-        <option>QA Consulting</option>
-
-    </select>
-
-    <textarea
-        id="message"
-        rows="5"
-        placeholder="Describe your project requirements"
-        class="p-3 rounded text-black w-full mb-3"></textarea>
-
-    <button
-        id="submitBtn"
-        type="submit"
-        class="bg-slate-950 text-white p-3 rounded w-full">
-
-        Request QA Consultation
-
-    </button>
-
-</form>
 </section>
 
-<a href="https://wa.me/919866125609" class="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full text-white">
-<i class="fab fa-whatsapp"></i>
-</a>
+<section id="about" class="max-w-7xl mx-auto p-8">
+<h2 class="text-4xl font-bold mb-4">About Me</h2>
+<div class="glass p-8 rounded-xl">Experienced QA professional with expertise in UAT, API Testing, Automation Testing, SQL Validation, Release Management and Agile Delivery.</div>
+</section>
 
-<footer class="text-center p-8 border-t border-slate-800">
-© 2026 Rajesh Thaneru | Senior QA Engineer | QA Consultant
-</footer>
+<section id="skills" class="max-w-7xl mx-auto p-8">
+<h2 class="text-4xl font-bold mb-4">Skills</h2>
+<div class="grid md:grid-cols-4 gap-4">
+<div class="glass p-4 rounded-xl">Playwright</div>
+<div class="glass p-4 rounded-xl">Selenium</div>
+<div class="glass p-4 rounded-xl">API Testing</div>
+<div class="glass p-4 rounded-xl">Postman</div>
+<div class="glass p-4 rounded-xl">SQL</div>
+<div class="glass p-4 rounded-xl">JIRA</div>
+<div class="glass p-4 rounded-xl">Python</div>
+<div class="glass p-4 rounded-xl">UAT</div>
+</div>
+</section>
 
-</body>
-</html>'''
+<section id="services" class="max-w-7xl mx-auto p-8">
+<h2 class="text-4xl font-bold mb-4">Freelance Services</h2>
+<div class="grid md:grid-cols-3 gap-4">
+<div class="glass p-6 rounded-xl">Automation Testing</div>
+<div class="glass p-6 rounded-xl">Manual Testing</div>
+<div class="glass p-6 rounded-xl">API Testing</div>
+<div class="glass p-6 rounded-xl">QA Consulting</div>
+<div class="glass p-6 rounded-xl">UAT Support</div>
+<div class="glass p-6 rounded-xl">Release Sign-Off</div>
+</div>
+</section>
+
+<section id="contact" class="max-w-4xl mx-auto p-8">
+<div class="glass p-8 rounded-3xl">
+<h2 class="text-4xl font-bold mb-6">Request QA Consultation</h2>
+<form id="consultationForm" class="space-y-4">
+<input id="name" placeholder="Your Name" class="w-full p-4 rounded-xl text-black">
+<input id="email" placeholder="Email Address" class="w-full p-4 rounded-xl text-black">
+<input id="company" placeholder="Company Name" class="w-full p-4 rounded-xl text-black">
+<input id="phone" placeholder="Phone Number" class="w-full p-4 rounded-xl text-black">
+<select id="service" class="w-full p-4 rounded-xl text-black">
+<option>Automation Testing</option><option>Manual Testing</option><option>API Testing</option><option>QA Consulting</option>
+</select>
+<textarea id="message" rows="5" placeholder="Project Details" class="w-full p-4 rounded-xl text-black"></textarea>
+<button id="submitBtn" type="button" onclick="sendMail()" class="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-4 rounded-xl">🚀 Request Free QA Consultation</button>
+</form>
+<div id="status" class="mt-4"></div>
+</div>
+</section>
+
+<script>
+emailjs.init({{publicKey:"XWEyzUqdlNbh0n2ikVtHq"}});
+function sendMail(){{
+const btn=document.getElementById('submitBtn');
+btn.innerHTML='Sending...';
+emailjs.send('service_6v0ts7t','template_f0zqmj6',{{
+name:name.value,email:email.value,company:company.value,phone:phone.value,service:service.value,message:message.value
+}}).then(()=>{{
+document.getElementById('status').innerHTML='✅ Request submitted successfully';
+btn.innerHTML='🚀 Request Free QA Consultation';
+}}).catch((e)=>{{
+document.getElementById('status').innerHTML='❌ Check EmailJS configuration in browser console';
+console.log(e);
+btn.innerHTML='🚀 Request Free QA Consultation';
+}})
+}}
+</script>
+</body></html>"""
